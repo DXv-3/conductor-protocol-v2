@@ -1,0 +1,13 @@
+skill_dir: /home/workdir/grok/skills/conductor-complete-bundle
+reference_doc: /home/workdir/grok/skills/conductor-complete-bundle/references/conductor-v1-full-bundle.md
+build_script: /home/workdir/grok/skills/conductor-complete-bundle/scripts/build-bundle.py
+artifacts_dir: ./artifacts
+evidence_dir: ./artifacts/evidence
+required_runtime_categories:
+  - proof_gate
+  - rewrite_behavior
+  - cost_control
+  - memory_persistence
+  - background_collection
+  - config_loading
+  - build_on_top

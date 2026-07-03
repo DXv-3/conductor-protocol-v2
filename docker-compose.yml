@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  conductor:
+    build: .
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./configs:/app/configs
+    environment:
+      - SESSION_ID=docker-session
+    command: python scripts/promote_bundle.py
+
+  demo:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./configs:/app/configs
+    command: streamlit run skybridge_apps/conductor_demo/app.py --server.port=8501 --server.address=0.0.0.0

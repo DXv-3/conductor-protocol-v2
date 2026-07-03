@@ -1,0 +1,18 @@
+required_runtime_categories:
+  - proof_gate
+  - rewrite_behavior
+  - cost_control
+  - memory_persistence
+  - background_collection
+  - config_loading
+  - build_on_top
+
+blocking_statuses:
+  - asserted_unverified
+  - contradicted
+  - reference_only
+  - unverified
+
+allow_provenance_only_categories:
+  - provenance
+  - versioning
