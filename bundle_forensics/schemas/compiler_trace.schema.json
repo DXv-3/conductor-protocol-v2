@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "compiler_trace",
+  "type": "object",
+  "required": ["trace_id","files_read","scripts_invoked","generated_outputs"],
+  "properties": {
+    "trace_id": {"type":"string"},
+    "files_read": {"type":"array","items":{"type":"string"}},
+    "scripts_invoked": {"type":"array","items":{"type":"string"}},
+    "reference_docs_used": {"type":"array","items":{"type":"string"}},
+    "generated_outputs": {"type":"array","items":{"type":"string"}},
+    "timestamps": {"type":"object"}
+  }
+}

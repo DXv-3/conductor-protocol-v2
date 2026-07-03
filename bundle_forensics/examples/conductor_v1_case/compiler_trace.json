@@ -1,0 +1,8 @@
+{
+  "trace_id": "prov-v1-example",
+  "files_read": ["SKILL.md", "build-bundle.py", "conductor-v1-full-bundle.md"],
+  "scripts_invoked": ["build-bundle.py"],
+  "reference_docs_used": ["conductor-v1-full-bundle.md"],
+  "generated_outputs": ["conductor-v1-full-bundle-output.md"],
+  "timestamps": {"observed_at": "2026-01-01T00:00:00Z"}
+}

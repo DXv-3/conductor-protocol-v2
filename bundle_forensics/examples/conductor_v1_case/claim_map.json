@@ -1,0 +1,25 @@
+{
+  "artifact_name": "conductor-v1-full-bundle-output.md",
+  "claims": [
+    {
+      "claim_id": "CLAIM-001",
+      "text": "Cost cap enforced per session.",
+      "category": "cost_control",
+      "required_for_production": true,
+      "evidence_class": "contradicted",
+      "sources": [{"kind": "audit", "ref": "code_file:8"}],
+      "runtime_tests": ["TEST-COST-001"],
+      "notes": "current_cost remained 0.0 after cycle in audited v1."
+    },
+    {
+      "claim_id": "CLAIM-002",
+      "text": "Proof gate blocks promotion without runtime evidence.",
+      "category": "proof_gate",
+      "required_for_production": true,
+      "evidence_class": "reference_only",
+      "sources": [{"kind": "reference_doc", "ref": "conductor-v1-full-bundle.md"}],
+      "runtime_tests": [],
+      "notes": "No runtime test executed proof gate path in v1."
+    }
+  ]
+}

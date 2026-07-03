@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "forensic_claim_map",
+  "type": "object",
+  "required": ["artifact_name","claims"],
+  "properties": {
+    "artifact_name": {"type":"string"},
+    "claims": {"type":"array","items":{"type":"object","required":["claim_id","text","category","evidence_class"],"properties":{"claim_id":{"type":"string"},"text":{"type":"string"},"category":{"type":"string"},"evidence_class":{"type":"string"},"drift_status":{"type":"string"}}}}
+  }
+}
