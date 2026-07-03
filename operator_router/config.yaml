@@ -1,0 +1,3 @@
+route_on_pass: canonical
+route_on_fail: blocked_queue
+notify_on_block: true

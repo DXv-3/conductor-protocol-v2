@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "provenance_trace",
+  "type": "object",
+  "required": ["trace_id","session_id","artifact_name","source_videos","files_read","commands_run","reference_docs_used","scripts_invoked","generated_outputs","timestamps"],
+  "properties": {
+    "trace_id": {"type":"string"},
+    "session_id": {"type":"string"},
+    "artifact_name": {"type":"string"},
+    "source_videos": {"type":"array","items":{"type":"object","required":["file_id","filename"],"properties":{"file_id":{"type":"string"},"filename":{"type":"string"},"summary":{"type":"string"}}}},
+    "files_read": {"type":"array","items":{"type":"string"}},
+    "commands_run": {"type":"array","items":{"type":"string"}},
+    "reference_docs_used": {"type":"array","items":{"type":"string"}},
+    "scripts_invoked": {"type":"array","items":{"type":"string"}},
+    "artifact_paths_checked": {"type":"array","items":{"type":"string"}},
+    "generated_outputs": {"type":"array","items":{"type":"string"}},
+    "timestamps": {"type":"object","required":["observed_at"],"properties":{"observed_at":{"type":"string"},"generated_at":{"type":"string"}}},
+    "operator_notes": {"type":"string"}
+  }
+}

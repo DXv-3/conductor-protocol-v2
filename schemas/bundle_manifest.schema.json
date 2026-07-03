@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "bundle_manifest",
+  "type": "object",
+  "required": ["artifact_name","version","files","provenance_trace_id"],
+  "properties": {
+    "artifact_name": {"type":"string"},
+    "version": {"type":"string"},
+    "files": {"type":"array","items":{"type":"object","required":["path","checksum"],"properties":{"path":{"type":"string"},"checksum":{"type":"string"},"role":{"type":"string"}}}},
+    "provenance_trace_id": {"type":"string"},
+    "claim_map_id": {"type":"string"}
+  }
+}

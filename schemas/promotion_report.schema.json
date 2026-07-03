@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "promotion_report",
+  "type": "object",
+  "required": ["artifact_name","timestamp","decision","claim_statuses"],
+  "properties": {
+    "artifact_name": {"type":"string"},
+    "timestamp": {"type":"string"},
+    "decision": {"type":"string","enum":["allowed","blocked"]},
+    "blocking_claims": {"type":"array","items":{"type":"string"}},
+    "notes": {"type":"array","items":{"type":"string"}},
+    "claim_statuses": {"type":"array","items":{"type":"object","required":["claim_id","class"],"properties":{"claim_id":{"type":"string"},"class":{"type":"string"}}}}
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "claim_map",
+  "type": "object",
+  "required": ["artifact_name","claims"],
+  "properties": {
+    "artifact_name": {"type":"string"},
+    "claims": {"type":"array","items":{"type":"object","required":["claim_id","text","category","required_for_production","evidence_class","sources"],"properties":{"claim_id":{"type":"string"},"text":{"type":"string"},"category":{"type":"string","enum":["proof_gate","rewrite_behavior","cost_control","memory_persistence","background_collection","config_loading","build_on_top","versioning","integration","provenance"]},"required_for_production":{"type":"boolean"},"evidence_class":{"type":"string","enum":["runtime_proven","compiler_inferred","reference_only","asserted_unverified","contradicted","unverified"]},"sources":{"type":"array","items":{"type":"object","required":["kind","ref"],"properties":{"kind":{"type":"string"},"ref":{"type":"string"}}}},"runtime_tests":{"type":"array","items":{"type":"string"}},"notes":{"type":"string"}}}}
+  }
+}

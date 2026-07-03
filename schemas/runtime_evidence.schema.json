@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "runtime_evidence",
+  "type": "object",
+  "required": ["artifact_name","tests","summary"],
+  "properties": {
+    "artifact_name": {"type":"string"},
+    "tests": {"type":"array","items":{"type":"object","required":["test_id","purpose","status"],"properties":{"test_id":{"type":"string"},"purpose":{"type":"string"},"status":{"type":"string","enum":["pass","fail","skip"]},"observed_output":{"type":"string"},"artifacts_written":{"type":"array","items":{"type":"string"}},"claims_covered":{"type":"array","items":{"type":"string"}}}}},
+    "summary": {"type":"object","required":["pass_count","fail_count","skip_count"],"properties":{"pass_count":{"type":"integer"},"fail_count":{"type":"integer"},"skip_count":{"type":"integer"}}}
+  }
+}
