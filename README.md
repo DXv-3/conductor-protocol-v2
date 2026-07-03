@@ -25,10 +25,5 @@ No bundle may be marked canonical, production, validated, proof‑gated, or buil
 make install
 make pipeline
 make test
-```
-
-## Demo
-
-```bash
 make demo
 ```
