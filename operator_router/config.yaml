@@ -1,3 +1,6 @@
+# operator_router/config.yaml
 route_on_pass: canonical
 route_on_fail: blocked_queue
-notify_on_block: true
+
+# Path to the-brain repo root (optional: overrides BRAIN_REPO_PATH env var)
+# brain_db_path: /absolute/path/to/the-brain/brain.db
